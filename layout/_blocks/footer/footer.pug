@@ -1,0 +1,10 @@
+mixin footer()
+    footer(class="footer")
+        div(class="box")
+            include ../../_blocks/footer-nav/footer-nav.pug
+            +footer-nav()(class="footer__nav")
+
+            p(class="footer__copyright") Разработка сайта 
+                a(href="" class="footer__copyright-link") Redsoft
+
+    // END .footer

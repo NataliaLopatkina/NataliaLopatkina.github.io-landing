@@ -1,0 +1,37 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Landing
+        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+        link(rel="stylesheet" href="stylesheets/index.min.css")
+    
+    body(class="page")
+        include ../../_blocks/header/header.pug
+        +header()
+
+        main(class="main")
+            include ../../_blocks/slider/slider.pug
+            +slider(    )
+
+            include ../../_blocks/description/description.pug
+            +description()
+
+            include ../../_blocks/functions/functions.pug
+            +functions(obj)
+
+            include ../../_blocks/health-diary/health-diary.pug
+            +health-diary()
+
+            include ../../_blocks/specialists/specialists.pug
+            +specialists()
+
+            include ../../_blocks/subscription/subscription.pug
+            +subscription()
+
+        include ../../_blocks/footer/footer.pug
+        +footer()
+
+        script(src="//code.jquery.com/jquery-1.11.0.min.js")
+        script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="scripts/common.js")

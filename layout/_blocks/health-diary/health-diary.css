@@ -1,0 +1,66 @@
+.health-diary {
+    padding-top: 151px;
+    padding-bottom: 200px;
+    background: #fafaff;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 89px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        width: 660px;
+        padding-left: 60px;
+        box-sizing: border-box;
+        margin-right: 48px;
+        counter-reset: list;
+    }
+
+    &__item {
+        margin-bottom: 79px;
+        list-style: none;
+        position: relative;
+
+        &:before {
+            counter-increment: list;
+            content: counter(list);
+            font-size: 60px;
+            line-height: calc(122 / 60);
+            font-weight: 500;
+            color: #a7e1f3;
+            text-align: center;
+            width: 123px;
+            height: 123px;
+            background: url("../images/icons/ellipse.png") no-repeat;
+            position: absolute;
+            top: -31px;
+            left: -109px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item-title {
+        padding-bottom: 9px;
+        position: relative;
+        background: #fafaff;
+        z-index: 1000;
+    }
+
+    &__item-text {
+        position: relative;
+        background: #fafaff;
+        z-index: 1000;
+    }
+
+    &__image-box {
+        width: calc(100% - 660px);
+    }
+}

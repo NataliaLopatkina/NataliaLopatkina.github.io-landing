@@ -1,0 +1,51 @@
+.footer-nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 241px;
+        padding-top: 0;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        padding-top: 3px;
+    }
+
+    &__item {
+        margin-right: 70px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 23px;
+            margin: auto;
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: transparent;
+            border-radius: 50%;
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            transition-property: background, opacity, visibility;
+            transition-duration: 0.25s;
+            transition-timing-function: ease;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            &:after {
+                background: #fafbfd;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
